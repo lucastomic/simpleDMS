@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  api-gateway:
+    build: 
+      context: ./apigateway
+      dockerfile: dockerfile
+    ports:
+      - "3001:3001"
+    networks:
+      - go-network
+    env_file:
+      - ./apigateway/.env
+
+  storage-service:
+    build: 
+      context: ./storageservice
+      dockerfile: dockerfile
+    networks:
+      - go-network
+  metadata-service:
+    build: 
+      context: ./metadataservice
+      dockerfile: dockerfile
+    networks:
+      - go-network
+    env_file:
+      - ./metadataservice/.env
+
+networks:
+  go-network:
+    driver: bridge

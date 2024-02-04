@@ -88,7 +88,9 @@ SimpleDMS has the next architecture
 ![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-gK6t83mIe-wcGjoPcpGAEe2_cIYKBXExb4v2hmbREDv-tvtgicmuX781oonHM9L26C5uq_G3jBwzMRJ8uLdkr3_wO3zliyV57RqxWYuzvg_wb01OI_lHhRIbdPJEKCUYF6XS4DrQZ8QFXJGy4D2sOiwdeu0Y3R0gKjxWtu3s_LutaimnfJlJS5PfRBQ/s612/SimpleDMS.jpg)
 
 Where APIGateway acts as a reverse proxy, providing the request with a unique request ID that would be maintained throughout the request flow, even if it passes through different services. Thus facilitating the monitoring of logs and traces.
+
 The servers can't be reached directly, due they are in a private network.
+
 As it is believed that this is outside the scope of the task, the APIGateway is a very simple small script that ignores the good practices and other functionalities that it can provide.
 
 ``` go

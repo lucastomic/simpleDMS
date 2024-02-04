@@ -40,7 +40,7 @@ func TestRetrieveUnexistentFile(t *testing.T) {
 }
 
 ```
-También existen tests unitarios en los servicios principales `storageService` y `metadataService`
+There are also unit tests on the main services `storageService` and `metadataService`, although they have not been done exhaustively.
 
 ## Endpoints
 ### GET /metadata/file

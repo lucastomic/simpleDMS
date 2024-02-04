@@ -84,7 +84,9 @@ File requested
 ## Architecture
 
 SimpleDMS has the next architecture
+
 ![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-gK6t83mIe-wcGjoPcpGAEe2_cIYKBXExb4v2hmbREDv-tvtgicmuX781oonHM9L26C5uq_G3jBwzMRJ8uLdkr3_wO3zliyV57RqxWYuzvg_wb01OI_lHhRIbdPJEKCUYF6XS4DrQZ8QFXJGy4D2sOiwdeu0Y3R0gKjxWtu3s_LutaimnfJlJS5PfRBQ/s612/SimpleDMS.jpg)
+
 Where APIGateway acts as a reverse proxy, providing the request with a unique request ID that would be maintained throughout the request flow, even if it passes through different services. Thus facilitating the monitoring of logs and traces.
 The servers can't be reached directly, due they are in a private network.
 As it is believed that this is outside the scope of the task, the APIGateway is a very simple small script that ignores the good practices and other functionalities that it can provide.
@@ -117,7 +119,9 @@ func proxyHandler(target *url.URL) http.HandlerFunc {
 ```
 
 And following the next 4-layers architecture inside the main services 
+
 ![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiig-kXKpscHmC7Nm__Jji1UpVeynho6Yu_MocTl2Dy8_Dgs0hPlyjMiLDcEwwefJteI4uxOVw1asCukrRfsxLRFITm12K2GtK_M2XKXqPf9WZGY_hdcG1XUzrBppm0ogWbwW_Mpqf2iIujBu-YBXQ7mkV_sCB7E9H_VdJJeaskUZatGle6BTmyXoKw8bU/s542/Architeccture.jpg)
+
 Where an attempt is made to maximize the decoupling between each service through abstractions, including the framework used (in this case gorilla/mux) encapsulating it only in the outer layer of Server
 
 ## Concurrency

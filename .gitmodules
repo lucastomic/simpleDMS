@@ -1,0 +1,12 @@
+[submodule "metadataservice"]
+	path = metadataservice
+	url = https://github.com/lucastomic/dmsMetadataService
+[submodule "stoargeservice"]
+	path = stoargeservice
+	url = https://github.com/lucastomic/dmsStorageService
+[submodule "tests"]
+	path = tests
+	url = https://github.com/lucastomic/dmsE2ETests
+[submodule "apigateway"]
+	path = apigateway
+	url = https://github.com/lucastomic/dmsApiGateway

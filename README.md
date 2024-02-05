@@ -33,7 +33,6 @@ func TestRetrieveUnexistentFile(t *testing.T) {
 		t,
 		storageURL,
 		map[string]string{},
-		// TODO: Instad of using a random number, we should have predefined a constant number, which is realised after testing for future testing.
 		[]string{"-1"},
 	)
 	helperSendRequest(t, req, 404)
